@@ -1,15 +1,36 @@
 import { useState, useEffect } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { brandAssets, contactInfo, navItems, QUOTE_MAIL, icons } from "../siteContent";
 
 function Layout() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Sayfa değişince menüyü kapat
+  useEffect(() => { setMenuOpen(false); }, [pathname]);
+
+  // Menü açıkken body scroll'u kilitle, scrollbar kaymasını önle
+  useEffect(() => {
+    if (menuOpen) {
+      const w = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${w}px`;
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    };
+  }, [menuOpen]);
 
   return (
     <>
@@ -31,11 +52,43 @@ function Layout() {
             ))}
           </nav>
 
-          <a className="nav-cta" href={QUOTE_MAIL}>
+          <a className="nav-cta nav-cta-desktop" href={QUOTE_MAIL}>
             Teklif Al
           </a>
+
+          <button
+            className={`hamburger${menuOpen ? " is-active" : ""}`}
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label={menuOpen ? "Menüyü kapat" : "Menüyü aç"}
+            aria-expanded={menuOpen}
+          >
+            <span /><span /><span />
+          </button>
         </div>
       </header>
+
+      {/* Mobil nav overlay — header dışında, backdrop-filter containing block sorununu önler */}
+      <div className={`mobile-nav${menuOpen ? " is-open" : ""}`} aria-hidden={!menuOpen}>
+        <button
+          className="mobile-nav-close"
+          onClick={() => setMenuOpen(false)}
+          aria-label="Menüyü kapat"
+        >
+          <span /><span />
+        </button>
+        <nav aria-label="Mobil menu">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.href}
+              to={item.href}
+              className={({ isActive }) => `nav-link${isActive ? " is-active" : ""}`}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+          <a className="nav-cta" href={QUOTE_MAIL} style={{ marginTop: "8px" }}>Teklif Al</a>
+        </nav>
+      </div>
 
       <Outlet />
 

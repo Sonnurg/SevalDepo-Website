@@ -87,7 +87,7 @@ export const contactInfo = {
   emailHref: "mailto:info@sevalgida.com.tr",
   secondaryEmail: "ertugrulmemis@sevalgida.com.tr",
   secondaryEmailHref: "mailto:ertugrulmemis@sevalgida.com.tr",
-  address: "Mahmutbey Mahallesi, İstanbul / Sultangazi",
+  address: "Cebeci Mahallesi, Sultangazi / İstanbul",
 };
 
 export const navItems = [
@@ -100,7 +100,7 @@ export const navItems = [
 export const serviceCards = [
   {
     title: "Hangi Ürünler İçin Uygun?",
-    text: "Beyaz et ve kırmızı et ürünleri, süt ve süt ürünleri, donuk sebze ve meyveler, deniz ürünleri, dondurulmuş hazır gıdalar, dondurma, donuk tatlılar ile pasta ve unlu mamuller için uygundur.",
+    text: "Beyaz et ve kırmızı et ürünleri, süt ve süt ürünleri, donuk sebze ve meyveler, paketli deniz ürünleri, dondurulmuş hazır gıdalar, dondurma, donuk tatlılar ile pasta ve unlu mamuller için uygundur.",
     icon: palletIcon,
     background: serviceCardBackground,
   },
@@ -131,7 +131,7 @@ export const homeStorageCards = [
   },
   {
     title: "Et, Balık ve Deniz Ürünleri",
-    text: "Kırmızı et, beyaz et, deniz ürünleri ve hazır gıdalar için -18°C ve altı kontrollü soğuk depolama.",
+    text: "Kırmızı et, beyaz et, paketli deniz ürünleri ve hazır gıdalar için -18°C ve altı kontrollü soğuk depolama.",
     image: depoStok5,
   },
 ];
@@ -227,7 +227,7 @@ export const aboutGallery = [
 export const serviceDetails = [
   {
     title: "Donuk Depolama (-18°C / -25°C)",
-    text: "Donuk et, tavuk, deniz ürünleri ve hazır gıdalar için -18°C ve altı sıcaklıklarda güvenli muhafaza sağlanır. Dondurma ve donuk tatlı ürünleri de bilgisayar kontrollü sistemlerle milimetrik sapmalarla korunan sabit sıcaklıkta kristalleşme riski olmadan muhafaza edilir.",
+    text: "Donuk et, tavuk, paketli deniz ürünleri ve hazır gıdalar için -18°C ve altı sıcaklıklarda güvenli muhafaza sağlanır. Dondurma ve donuk tatlı ürünleri de bilgisayar kontrollü sistemlerle milimetrik sapmalarla korunan sabit sıcaklıkta kristalleşme riski olmadan muhafaza edilir.",
     image: depoStok1,
   },
   {
@@ -242,7 +242,7 @@ export const serviceDetails = [
   },
   {
     title: "Koku İzolasyonlu Bağımsız Odalar",
-    text: "12 adet bağımsız depo odası sayesinde tatlı ve pasta grupları; et, balık ve koku yoğun ürünlerden tamamen izole edilmiş alanlarda muhafaza edilir. Ürünleriniz depodan çıktığı gibi — koku sinmesi riski yoktur.",
+    text: "12 adet bağımsız depo odası sayesinde tatlı ve pasta grupları; et, paketli balık ve koku yoğun ürünlerden tamamen izole edilmiş alanlarda muhafaza edilir. Ürünleriniz depodan çıktığı gibi — koku sinmesi riski yoktur.",
     image: sevalDepo4,
   },
   {
@@ -281,7 +281,7 @@ export const storageProductGroups = [
   "Beyaz et ve kırmızı et ürünleri",
   "Süt ve süt ürünleri",
   "Donuk sebze ve meyveler",
-  "Deniz ürünleri",
+  "Paketli deniz ürünleri",
   "Dondurulmuş hazır gıdalar",
   "Dondurma ve sorbe",
   "Donuk pasta ve unlu mamuller",
@@ -321,7 +321,7 @@ export const dessertProducts = [
   { label: "Waffle ve Sufle", desc: "Isıtılmaya hazır donuk hamur işleri" },
   { label: "Baklava ve Şerbetli Tatlılar", desc: "Tazeliğini korumak için dondurulmuş geleneksel tatlılar" },
   { label: "Pastacılık Hammaddeleri", desc: "Donuk meyve püreleri, bitkisel kremalar ve dolgu malzemeleri" },
-  { label: "Et, Balık ve Deniz Ürünleri", desc: "Koku izolasyonlu ayrı odalarda güvenli muhafaza" },
+  { label: "Et ve Paketli Deniz Ürünleri", desc: "Koku izolasyonlu ayrı odalarda güvenli muhafaza" },
 ];
 
 export const dessertCallouts = [
