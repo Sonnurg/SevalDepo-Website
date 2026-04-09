@@ -1,6 +1,16 @@
-import { Link } from "react-router-dom";
 import SectionHeading from "../components/SectionHeading";
-import { faqItems, pageMedia, serviceCards, serviceDetails } from "../siteContent";
+import {
+  faqItems,
+  pageMedia,
+  serviceCards,
+  serviceDetails,
+  storageProductGroups,
+  dessertAdvantages,
+  dessertProducts,
+  dessertCallouts,
+  contactInfo,
+  QUOTE_MAIL,
+} from "../siteContent";
 
 function ServicesPage() {
   return (
@@ -9,23 +19,26 @@ function ServicesPage() {
         <div className="container page-hero-grid">
           <div>
             <p className="eyebrow">HİZMETLERİMİZ</p>
-            <h1>Donuk ve soğuk depolama hizmetlerimiz</h1>
+            <h1>Gıda Sektörüne Profesyonel Soğuk Hava Depolama Hizmetleri</h1>
             <p className="page-intro">
-              Seval Soğuk Hava Deposu, 2.500 m² kapalı alan ve 12 adet soğuk depo odası ile
-              -40°C ile +4°C arasında profesyonel depolama hizmeti sunmaktadır.
+              Seval Soğuk Hava Deposu, 2.500 m² kapalı alan ve 12 adet bağımsız soğuk depo
+              odası ile -40°C'den +4°C'ye kadar geniş sıcaklık yelpazesinde profesyonel
+              depolama hizmeti sunmaktadır. Palet bazlı, parsiyel ve oda bazlı kiralama
+              seçenekleri ile ihtiyacınıza özel esnek çözümler.
             </p>
           </div>
           <div className="page-hero-media">
-            <img src={pageMedia.fishImage} alt="Soguk depolama urunleri" />
+            <img src={pageMedia.pasta2} alt="Seval Depo soğuk depolama hizmetleri" />
           </div>
         </div>
       </section>
 
+      {/* Genel Hizmet Kartları */}
       <section className="content-section">
         <div className="container">
           <SectionHeading
-            kicker="Depolama Modelleri"
-            title="Palet bazlı, parsiyel ve sıcaklık kontrollü profesyonel hizmet"
+            kicker="Depolama Seçenekleri"
+            title="Her ürün grubu için özelleştirilmiş sıcaklık kontrollü çözümler"
           />
           <div className="cards-grid">
             {serviceCards.map((service) => (
@@ -41,6 +54,83 @@ function ServicesPage() {
         </div>
       </section>
 
+      {/* Ürün Grupları Listesi */}
+      <section className="content-section product-groups-section">
+        <div className="container">
+          <SectionHeading
+            kicker="Depolama Kapsamı"
+            title="Geniş ürün yelpazesi, tek adreste"
+          />
+          <div className="product-groups-grid">
+            {storageProductGroups.map((product) => (
+              <div className="product-group-item" key={product}>
+                <span className="product-group-dot" />
+                {product}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dondurma & Pastacılık Sektörü Özel Bölüm */}
+      <section className="content-section dessert-section">
+        <div className="container">
+          <SectionHeading
+            kicker="Pastacılık ve Dondurma Sektörüne Özel Çözümler"
+            title="Hassas soğuk zincir, sıfır dalgalanma, koku izolasyonu"
+          />
+          <p className="dessert-intro">
+            Donuk tatlı ve dondurma sektörü, diğer gıdalara göre çok daha düşük ve sabit
+            sıcaklıklar gerektirir. Pastacılık ürünlerinizin ve dondurmalarınızın yapısını,
+            tadını ve görselliğini koruyan <strong>Hassas Soğuk Zincir</strong> hizmeti
+            sunuyoruz.
+          </p>
+
+          <div className="dessert-advantages-grid">
+            {dessertAdvantages.map((item) => (
+              <article className="dessert-advantage-card" key={item.title}>
+                <span className="dessert-tag">{item.tag}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ürün Grupları */}
+      <section className="content-section">
+        <div className="container">
+          <SectionHeading
+            kicker="Hangi Ürünler İçin Uygunuz?"
+            title="Geniş ürün yelpazesi, bağımsız odalar, koku izolasyonu"
+          />
+          <div className="dessert-products-grid">
+            {dessertProducts.map((product) => (
+              <article className="dessert-product-card" key={product.label}>
+                <h3>{product.label}</h3>
+                <p>{product.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Callout Bölümü */}
+      <section className="content-section">
+        <div className="container">
+          <div className="dessert-callouts-grid">
+            {dessertCallouts.map((item) => (
+              <article className="dessert-callout-card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Hizmet Detayları */}
       <section className="content-section frost-section">
         <div className="container service-detail-list">
           {serviceDetails.map((item, index) => (
@@ -58,6 +148,7 @@ function ServicesPage() {
         </div>
       </section>
 
+      {/* SSS */}
       <section className="content-section">
         <div className="container">
           <SectionHeading
@@ -75,7 +166,8 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section className="contact-band contact-band-plain">
+      {/* CTA */}
+      <section className="contact-band">
         <div className="container contact-grid">
           <div>
             <SectionHeading
@@ -84,14 +176,23 @@ function ServicesPage() {
               light
             />
             <p>
-              Urun tipinizi, tahmini palet miktarinizi ve kullanim suresini iletin;
-              ihtiyaciniza uygun alan modelini netlestirelim.
+              Ürün tipinizi, tahmini palet miktarını ve kullanım süresini iletin;
+              ihtiyacınıza uygun alan modelini birlikte netleştirelim.
             </p>
           </div>
           <div className="contact-card">
-            <Link className="button button-primary" to="/iletisim">
-              Iletisim Sayfasina Git
-            </Link>
+            <a href={QUOTE_MAIL} className="button button-primary" style={{ marginBottom: "12px", display: "inline-flex" }}>
+              Teklif Maili Gönder
+            </a>
+            <a
+              href={contactInfo.whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="button button-secondary"
+              style={{ display: "inline-flex" }}
+            >
+              WhatsApp'tan Yaz
+            </a>
           </div>
         </div>
       </section>

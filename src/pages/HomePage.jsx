@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import SectionHeading from "../components/SectionHeading";
 import {
   brandAssets,
@@ -7,9 +6,10 @@ import {
   homeStorageCards,
   operationsHighlights,
   pageMedia,
-  quickAccessItems,
   serviceCards,
   trustItems,
+  icons,
+  QUOTE_MAIL,
 } from "../siteContent";
 
 function HomePage() {
@@ -21,29 +21,24 @@ function HomePage() {
         </div>
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">İstanbul’da Kiralık Soğuk Hava Deposu</p>
             <h1>
-              İstanbul’da Kiralık Soğuk Hava Deposu
-              <br />
-              Palet Bazlı ve Parsiyel Depolama Hizmeti
+              İstanbul'da Kiralık Soğuk Hava Deposu
             </h1>
             <p className="hero-text">
-              Seval Soğuk Hava Deposu, dondurulmuş gıda ürünlerinin güvenli ve standartlara
-              uygun şekilde muhafazası için İstanbul Sultangazi’de hizmet vermektedir.
-              Bilgisayar kontrollü sistemler ile ISO ve HACCP standartlarına uygun, -18 °C
-              sabit sıcaklıkta depolama sağlanmaktadır.
+              Seval Soğuk Hava Deposu, İstanbul Sultangazi'de 2.500 m² modern tesisi ve 12 adet
+              bağımsız soğuk depo odası ile gıda sektörüne profesyonel soğuk depolama hizmeti
+              sunmaktadır. 30 yılı aşkın Seval Gıda güvencesiyle ürünleriniz güvende.
             </p>
             <p className="hero-text">
-              Tesisimiz, farklı ürün grupları için planlanmış soğuk depo odaları ile donuk
-              ve soğuk depolama ihtiyaçlarına çözüm sunmaktadır. Et, tavuk, deniz ürünleri,
-              dondurulmuş gıdalar ve diğer sıcaklık kontrollü ürünler uygun koşullarda
-              muhafaza edilir.
+              -40°C'den +4°C'ye geniş sıcaklık yelpazesinde donuk depolama ve şoklama hizmeti.
+              Palet bazlı, parsiyel ve oda bazlı kiralama seçenekleri ile ölçeğinize uygun
+              esnek çözümler.
             </p>
 
             <div className="hero-actions">
-              <Link className="button button-primary" to="/iletisim">
+              <a className="button button-primary" href={QUOTE_MAIL}>
                 Hemen Teklif Al
-              </Link>
+              </a>
               <a
                 className="button button-secondary"
                 href={contactInfo.whatsappHref}
@@ -54,30 +49,19 @@ function HomePage() {
               </a>
             </div>
 
-            <div className="hero-inline-contact">
-              {quickAccessItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target={item.href.startsWith("http") ? "_blank" : undefined}
-                  rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                >
-                  <strong>{item.label}</strong>
-                  <span>{item.value}</span>
-                </a>
-              ))}
-            </div>
-
             <div className="hero-points">
               <div>
+                <img src={icons.area} className="hero-stat-icon" alt="" />
                 <strong>2.500 m²</strong>
                 <span>Depolama alanı</span>
               </div>
               <div>
+                <img src={icons.frozenHouse} className="hero-stat-icon" alt="" />
                 <strong>12</strong>
                 <span>Soğuk depo odası</span>
               </div>
               <div>
+                <img src={icons.thermometer} className="hero-stat-icon" alt="" />
                 <strong>30+</strong>
                 <span>Yıllık deneyim</span>
               </div>
@@ -87,7 +71,7 @@ function HomePage() {
           <div className="hero-visual" aria-hidden="true">
             <img className="hero-badge-image" src={brandAssets.coldChainIcon} alt="" />
             <div className="warehouse-card">
-              <img src={pageMedia.heroImage} alt="" />
+              <img src={pageMedia.heroImage} alt="Seval Soğuk Hava Deposu iç görünüm" />
             </div>
           </div>
         </div>
@@ -102,7 +86,7 @@ function HomePage() {
           </div>
           <div className="quick-contact-actions">
             <a className="button button-primary" href={contactInfo.phoneHref}>
-              Satış Müdürü Ertuğrul Memiş'i Ara
+              Hemen Ara
             </a>
             <a
               className="button button-secondary"
@@ -120,39 +104,62 @@ function HomePage() {
         <div className="container intro-grid">
           <div className="intro-copy">
             <SectionHeading
-              kicker="Profesyonel Soğuk Zincir Depolama"
+              kicker="Profesyonel Soğuk Zincir Yönetimi"
               title="Soğuk zincirde güvenilir çözüm ortağınız"
             />
             <p>
-              Seval Soğuk Hava Deposu, İstanbul’da merkezi konumda bulunan tesisinde donuk
-              ve soğuk depolama hizmeti sunmaktadır. 2.500 m² kapalı alan ve farklı
-              kapasitelere uygun depo odaları ile ürünlerin güvenli şekilde muhafaza
-              edilmesi sağlanır.
+              Seval Soğuk Hava Deposu, İstanbul Sultangazi'de dondurma, donuk pasta, unlu
+              mamuller, donmuş hamur işleri ve tüm donuk tatlı ürünleri için özelleşmiş soğuk
+              depolama hizmeti sunmaktadır. 12 adet bağımsız soğuk depo odası ile ürünleriniz
+              doğru sıcaklıkta, güvenle muhafaza edilir.
             </p>
             <p>
-              Rampalı TIR yükleme alanı, forklift destekli operasyon altyapısı ve deneyimli
-              depo personeli ile depolama ve sevkiyat süreçleri düzenli ve kontrollü şekilde
-              yönetilmektedir.
+              Rampalı TIR yükleme alanı ve forklift destekli operasyon altyapısı ile depolama
+              ve sevkiyat süreçleri soğuk zincir kırılmadan yürütülmektedir. TEM Otoyolu
+              bağlantısı sayesinde İstanbul içi tatlıcı ve pastane dağıtım lojistiğinizde
+              zaman ve maliyet avantajı sağlayın.
             </p>
           </div>
 
           <div className="intro-panel">
-            <div className="panel-pill">Merkezi Konumda, 2.500 m² Depolama Alanı</div>
-            <img className="intro-panel-image" src={brandAssets.servicesLayout} alt="" />
-            <div className="panel-stat">
-              <strong>30 Yıllık Gıda Sektörü Deneyimi</strong>
-              <span>Hijyen, kalite ve gıda güvenliği standartlarına uygun operasyon</span>
+            <div className="panel-pill">Sultangazi, İstanbul — 2.500 m² Depolama Alanı</div>
+            <div className="panel-icon-grid">
+              <div className="panel-icon-item">
+                <img src={icons.area} alt="" />
+                <strong>2.500 m²</strong>
+                <span>Kapalı alan</span>
+              </div>
+              <div className="panel-icon-item">
+                <img src={icons.frozenHouse} alt="" />
+                <strong>12 Oda</strong>
+                <span>Bağımsız depo</span>
+              </div>
+              <div className="panel-icon-item">
+                <img src={icons.thermometer} alt="" />
+                <strong>−40°C</strong>
+                <span>En düşük sıcaklık</span>
+              </div>
+              <div className="panel-icon-item">
+                <img src={icons.snowflake} alt="" />
+                <strong>30+ Yıl</strong>
+                <span>Sektör deneyimi</span>
+              </div>
             </div>
             <div className="panel-stat">
-              <strong>Donuk ve Soğuk Depolama</strong>
+              <strong>30 Yıllık Gıda Sektörü Deneyimi</strong>
+              <span>ISO ve HACCP standartlarına uyumlu, hijyenik ve güvenli operasyon</span>
+            </div>
+            <div className="panel-stat">
+              <strong>-40°C'den +4°C'ye Tam Yelpaze</strong>
               <span>
-                Et, tavuk, deniz ürünleri, süt ürünleri ve dondurulmuş gıdalar için uygun
-                depolama
+                Dondurma, donuk pasta, unlu mamuller, donmuş hamur işleri ve tüm donuk tatlılar için uygun depolama
               </span>
             </div>
             <div className="panel-stat">
-              <strong>Operasyonel Avantaj</strong>
-              <span>Rampalı TIR yükleme alanı ve forklift destekli kontrollü süreçler</span>
+              <strong>Esnek Kiralama Seçenekleri</strong>
+              <span>
+                Küçük tatlıcıdan büyük üretime tek paletten tam oda kiralamaya parsiyel ve oda bazlı çözümler
+              </span>
             </div>
           </div>
         </div>
@@ -162,7 +169,7 @@ function HomePage() {
         <div className="container">
           <SectionHeading
             kicker="Hizmetlerimiz"
-            title="İhtiyacınıza göre oda bazlı veya parsiyel depolama çözümleri sunuyoruz."
+            title="Palet bazlı, parsiyel ve sıcaklık kontrollü profesyonel depolama çözümleri"
           />
 
           <div className="cards-grid">
@@ -187,7 +194,7 @@ function HomePage() {
         <div className="container">
           <SectionHeading
             kicker="Operasyon Gücü"
-            title="Sıcaklık, güvenlik ve sistem altyapısını hızlıca görün"
+            title="Sıcaklık kontrolü, güvenlik ve uluslararası standartlar"
           />
           <div className="operations-grid">
             {operationsHighlights.map((item) => (
@@ -228,8 +235,8 @@ function HomePage() {
         <div className="container split-grid">
           <div className="infra-copy">
             <SectionHeading
-              kicker="Soğuk Depolamada Güçlü Altyapı"
-              title="Merkezi konum, kontrollü operasyon ve sektör deneyimi"
+              kicker="Neden Seval Soğuk Hava Deposu?"
+              title="Stratejik konum, uzman kadro ve kontrollü operasyon"
             />
 
             <div className="benefit-list">
@@ -244,7 +251,7 @@ function HomePage() {
 
           <div className="infra-visual" aria-hidden="true">
             <div className="stack-photo main-photo">
-              <img src={pageMedia.buildingImage} alt="" />
+              <img src={pageMedia.buildingImage} alt="Seval Depo tesis dış görünüm" />
             </div>
             <div className="stack-photo side-photo top-photo">
               <img src={pageMedia.workerImage} alt="" />
@@ -259,8 +266,8 @@ function HomePage() {
       <section className="trust-section">
         <div className="container">
           <SectionHeading
-            kicker="Güven Alanı"
-            title="Referans, sertifika ve operasyon güveni için güçlü bir temel"
+            kicker="Güven ve Kalite"
+            title="Gıda güvenliği, esnek çözüm ve 30 yıllık tecrübe"
           />
           <div className="trust-grid">
             {trustItems.map((item) => (
