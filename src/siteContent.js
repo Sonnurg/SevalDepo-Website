@@ -47,7 +47,7 @@ import binaGorseli from "./assets/bina görseli.jpg";
 import dondurma from "./assets/dondurma.jpeg";
 import donukMeyve from "./assets/donuk meyve.webp";
 import pasta from "./assets/pasta.jpeg";
-import pasta2 from "./assets/pasta2.jpeg";
+import pasta2 from "./assets/donuk-tatli.jpeg";
 
 export const brandAssets = {
   logoBar,

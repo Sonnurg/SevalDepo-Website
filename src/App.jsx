@@ -5,6 +5,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
+import KvkkPage from "./pages/KvkkPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -22,6 +23,7 @@ function App() {
           <Route path="/hakkimizda" element={<AboutPage />} />
           <Route path="/hizmetlerimiz" element={<ServicesPage />} />
           <Route path="/iletisim" element={<ContactPage />} />
+          <Route path="/kvkk" element={<KvkkPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

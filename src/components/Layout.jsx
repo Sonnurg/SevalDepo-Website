@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { NavLink, Link, Outlet, useLocation } from "react-router-dom";
 import { brandAssets, contactInfo, navItems, QUOTE_MAIL, icons } from "../siteContent";
 
 function Layout() {
@@ -105,6 +105,7 @@ function Layout() {
           <div className="footer-meta">
             <p>{contactInfo.address}</p>
             <p>&copy; 2026 Seval Depo. Tüm hakları saklıdır.</p>
+            <p><Link to="/kvkk" className="footer-kvkk-link">KVKK Aydınlatma Metni</Link></p>
           </div>
         </div>
       </footer>
