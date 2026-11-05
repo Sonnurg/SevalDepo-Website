@@ -45,11 +45,11 @@ function ContactPage() {
                 <span>Hızlı yazışma ve teklif</span>
               </div>
             </a>
-            <a href={contactInfo.secondaryEmailHref} className="contact-quick-box">
+            <a href={contactInfo.emailHref} className="contact-quick-box">
               <img src={icons.mail} className="contact-quick-icon" alt="" />
               <div>
                 <strong>E-posta</strong>
-                <span>{contactInfo.secondaryEmail}</span>
+                <span>{contactInfo.email}</span>
               </div>
             </a>
             <a href={contactInfo.localPhoneHref} className="contact-quick-box">
@@ -106,7 +106,7 @@ function ContactPage() {
                     <em>Hızlı yazışma ve teklif</em>
                   </span>
                 </a>
-                <a href={contactInfo.secondaryEmailHref} className="contact-detail-item contact-email">
+                <a href={contactInfo.emailHref} className="contact-detail-item contact-email">
                   <span className="contact-detail-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
                       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -115,7 +115,7 @@ function ContactPage() {
                   </span>
                   <span>
                     <strong>E-posta</strong>
-                    <em>{contactInfo.secondaryEmail}</em>
+                    <em>{contactInfo.email}</em>
                   </span>
                 </a>
               </div>
