@@ -73,20 +73,18 @@ export const icons = {
 };
 
 export const QUOTE_MAIL =
-  "mailto:ertugrulmemis@sevalgida.com.tr?subject=Depolama%20Teklif%20Talebi&body=Merhaba%2C%20depolama%20teklifi%20almak%20istiyorum.";
+  "mailto:info@sevalgida.com.tr?subject=Depolama%20Teklif%20Talebi&body=Merhaba%2C%20depolama%20teklifi%20almak%20istiyorum.";
 
 export const contactInfo = {
   contactPerson: "Satış Müdürü Ertuğrul Memiş",
-  phone: "+90 553 406 39 24",
-  phoneHref: "tel:+905534063924",
+  phone: "+90 553 609 33 33",
+  phoneHref: "tel:+905536093333",
   whatsapp: "WhatsApp'tan Yazın",
-  whatsappHref: "https://wa.me/905534063924",
-  localPhone: "0212 609 34 34",
-  localPhoneHref: "tel:+902126093434",
+  whatsappHref: "https://wa.me/905536093333",
+  localPhone: "0212 609 33 33",
+  localPhoneHref: "tel:+902126093333",
   email: "info@sevalgida.com.tr",
   emailHref: "mailto:info@sevalgida.com.tr",
-  secondaryEmail: "ertugrulmemis@sevalgida.com.tr",
-  secondaryEmailHref: "mailto:ertugrulmemis@sevalgida.com.tr",
   address: "Cebeci Mahallesi, Sultangazi / İstanbul",
 };
 
@@ -158,13 +156,13 @@ export const homeBenefits = [
 export const quickAccessItems = [
   {
     label: "Mobil Hat",
-    value: "+90 553 406 39 24",
-    href: "tel:+905534063924",
+    value: "+90 553 609 33 33",
+    href: "tel:+905536093333",
   },
   {
     label: "WhatsApp",
     value: "Hızlı yazışma ve teklif",
-    href: "https://wa.me/905534063924",
+    href: "https://wa.me/905536093333",
   },
   {
     label: "E-posta",
