@@ -76,7 +76,6 @@ export const QUOTE_MAIL =
   "mailto:info@sevalgida.com.tr?subject=Depolama%20Teklif%20Talebi&body=Merhaba%2C%20depolama%20teklifi%20almak%20istiyorum.";
 
 export const contactInfo = {
-  contactPerson: "Satış Müdürü Ertuğrul Memiş",
   phone: "+90 553 609 33 33",
   phoneHref: "tel:+905536093333",
   whatsapp: "WhatsApp'tan Yazın",

@@ -71,10 +71,10 @@ function ContactPage() {
           />
 
           <div className="contact-cards-row">
-            {/* Satış müdürü kartı */}
+            {/* Teklif hattı kartı */}
             <div className="contact-info-card contact-primary-card">
-              <div className="contact-card-badge">Satış Müdürü</div>
-              <h2 className="contact-person-name">Ertuğrul Memiş</h2>
+              <div className="contact-card-badge">Hızlı İletişim</div>
+              <h2 className="contact-person-name">Teklif Hattı</h2>
               <p className="contact-card-desc">
                 Depolama teklifi ve saha bilgisi için doğrudan ulaşabilirsiniz.
               </p>
