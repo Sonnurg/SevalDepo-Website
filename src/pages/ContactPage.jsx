@@ -71,12 +71,12 @@ function ContactPage() {
           />
 
           <div className="contact-cards-row">
-            {/* Teklif hattı kartı */}
+            {/* Satış şefi kartı */}
             <div className="contact-info-card contact-primary-card">
-              <div className="contact-card-badge">Hızlı İletişim</div>
-              <h2 className="contact-person-name">Teklif Hattı</h2>
+              <div className="contact-card-badge">Satış Şefi · Tüm Türkiye</div>
+              <h2 className="contact-person-name">Göker</h2>
               <p className="contact-card-desc">
-                Depolama teklifi ve saha bilgisi için doğrudan ulaşabilirsiniz.
+                Türkiye genelinde depolama teklifi ve saha bilgisi için doğrudan ulaşabilirsiniz.
               </p>
               <div className="contact-detail-list">
                 <a href={contactInfo.phoneHref} className="contact-detail-item contact-phone">
